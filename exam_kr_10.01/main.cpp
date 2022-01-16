@@ -1,9 +1,12 @@
-#include "TKprk.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <queue>
+#include <string>
 using namespace std;
 bool check(int a) {
-    if (a < 1000 ||  a>9999) {
+    if (a < 1000 || a > 9999)
         return false;
-    }
     int b = a;
     int a1 = b % 10;
     b /= 10;
@@ -12,12 +15,11 @@ bool check(int a) {
     int a3 = b % 10;
     b /= 10;
     int a4 = b;
-    if (a1 != a2  || a1 != a3 || a1 != a4) {
+    if (a % 10 != a / 10 - a / 100 * 10
+        || a % 10 != a / 100 - a / 1000 * 10
+        || a % 10 != a / 1000)
         return true;
-    }
-    else {
-        return false;
-    }
+    return false;
 }
 pair<int, int> Sort(int a) {
     vector < int > c;
