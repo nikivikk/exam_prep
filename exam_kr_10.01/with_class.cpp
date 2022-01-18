@@ -13,6 +13,7 @@ int main()
         input.push_back(t);
     }
     TKprk obj(input);
+    cout << obj;
     obj.count_Kprk();
     obj.build_matrix();
     obj.make_output();

@@ -27,5 +27,8 @@ public:
     void sort_matrix();
     void print_matrix();
     void make_output();
+    
+    friend std::ostream &operator<<(std::ostream &os, TKprk const &m);
+    
     ~TKprk() { cout << "\n< TKprk object has been deleted at " << this << " >\n"; };
 };

@@ -133,3 +133,11 @@ void TKprk::make_output()
     }
 }
 
+std::ostream& operator<<(std::ostream &os, TKprk const &m)
+{
+    os << "Числа : ";
+    for (int i : m.num)
+        os << i << ' ';
+    os << '\n';
+    return os;
+}
