@@ -32,3 +32,5 @@
 #include "funcs.h"
 #include "some_structs/Tqueue.h"
 #include "some_structs/Tstack.h"
+
+using namespace std;
