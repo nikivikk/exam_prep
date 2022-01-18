@@ -77,7 +77,7 @@ vector<int> TKprk::num_to_vector(int a)
     {
         int b = bubble_sort(a);
         a = reverse(b);
-        if (a < 1000) a *= 10;
+        while (a < 1000) a *= 10;
         ma.push_back(a);
         ma.push_back(b);
         a -= b;
@@ -103,7 +103,7 @@ void TKprk::print_matrix()
 
 bool comparator(vector<int> a, vector<int> b)
 {
-    return a[0] > b[0];
+    return a[0] < b[0];
 }
 void TKprk::sort_matrix()
 {
