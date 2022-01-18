@@ -29,5 +29,6 @@
 
 #include "all_sorts.cpp"
 #include "presets.h"
+#include "funcs.h"
 #include "some_structs/Tqueue.h"
 #include "some_structs/Tstack.h"
