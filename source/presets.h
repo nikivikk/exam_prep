@@ -12,6 +12,8 @@ template<typename T> std::string to_string(const T &t)
 }
 
 // - - - - - - - - штуки чтобы выводить вектор через iostream и fstream- - - - - - -
+// vector<int> v = {1, 2, 3};
+// cout << v; // <- теперь работает!
 template <typename T>
 std::ostream& operator <<(std::ostream& output, const std::vector<T>& data)
 {
@@ -30,12 +32,15 @@ std::ofstream& operator <<(std::ofstream& output, const std::vector<T>& data)
 
 // - - - - - - - - перегрузка вывода в консоль и в файл для класса - - - - - - - - -
 //std::ostream &operator<<(std::ostream &os, myClass const &obj) {
-//    return os << obj.any;
+//    os << obj.any;
+//    return os;
 //}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 void raise_error(string e) { printf("\n\t\"presets.h\" : ERROR : %s\n", e.c_str()); }
 
+// функция считывает весь файл в векторный массив строк
+// auto file_input = ReadFromFile("input.txt");
 vector<string> ReadFromFile(string filename)
 {
     vector<string> input;
