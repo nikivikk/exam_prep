@@ -29,6 +29,7 @@ public:
     void make_output();
     
     friend std::ostream &operator<<(std::ostream &os, TKprk const &m);
+    TKprk operator=(TKprk &t);
     
     ~TKprk() { cout << "\n< TKprk object has been deleted at " << this << " >\n"; };
 };

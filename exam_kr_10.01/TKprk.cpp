@@ -141,3 +141,12 @@ std::ostream& operator<<(std::ostream &os, TKprk const &m)
     os << '\n';
     return os;
 }
+
+TKprk TKprk::operator=(TKprk &t)
+{
+    TKprk new_obj;
+    new_obj.num = t.num;
+    new_obj.Kprk = t.Kprk;
+    new_obj.Matr = t.Matr;
+    return new_obj;
+}
