@@ -39,7 +39,7 @@ vector<int> merge(vector<int> &v, int l, int m, int r)
     int i, j, k, nl, nr;
     //size of left and right sub-arrays
     nl = m - l + 1; nr = r - m;
-    int larr[nl], rarr[nr];
+    vector<int> larr(nl, 0), rarr(nr, 0);
     //fill left and right sub-arrays
     for(i = 0; i < nl; i++)
        larr[i] = v[l + i];
