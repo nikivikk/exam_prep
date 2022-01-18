@@ -31,8 +31,15 @@ std::ofstream& operator <<(std::ofstream& output, const std::vector<T>& data)
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // - - - - - - - - перегрузка вывода в консоль и в файл для класса - - - - - - - - -
-//std::ostream &operator<<(std::ostream &os, myClass const &obj) {
-//    os << obj.any;
+// > > > class.h
+//friend std::ostream &operator<<(std::ostream &os, TKprk const &m);
+// > > > class.cpp
+//std::ostream& operator<<(std::ostream &os, TKprk const &m)
+//{
+//    os << "Числа : ";
+//    for (int i : m.num)
+//        os << i << ' ';
+//    os << '\n';
 //    return os;
 //}
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -56,3 +63,5 @@ vector<string> ReadFromFile(string filename)
         }
     return input;
 }
+
+// добавить разделение строк
