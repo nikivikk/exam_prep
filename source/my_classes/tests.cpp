@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Tqueue.hpp"
+#include "Tqueue.h"
 
 using namespace std;
 
