@@ -3,11 +3,11 @@
 using namespace std;
 
 //- - - - - - next sorts are added below - - - - - -
-// - Bubble sort
-// - Insertion sort
-// - Merge sort(recursive)
-// - Quick sort(recursive)
-// - Heap sort
+// - Bubble sort (пузырьком)
+// - Insertion sort (вставками)
+// - Merge sort(recursive) (слиянием)
+// - Quick sort(recursive) (быстрая)
+// - Heap sort (хип сорт)
 
 void bubble_sort(vector<int> &v)
 {
