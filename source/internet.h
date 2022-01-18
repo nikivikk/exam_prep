@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <cstring>
+#include <sstream>
 #include <cmath>
 #include <bitset>
 #include <queue>
@@ -27,5 +28,6 @@
 #endif
 
 #include "all_sorts.cpp"
+#include "presets.h"
 #include "some_structs/Tqueue.h"
 #include "some_structs/Tstack.h"
