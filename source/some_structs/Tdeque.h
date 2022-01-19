@@ -20,7 +20,7 @@ class Tdeque {
     void raise_error(string e);
 public:
     Tdeque();
-//    ~Tdeque();
+    ~Tdeque();
     Tdeque(const Tdeque& t);
     void push_front(T data);
     void push_back(T data);
@@ -41,18 +41,18 @@ void Tdeque<T>::raise_error(string e) { cout << ">>> < Tdeque_error > : " << e <
 
 template<typename T>
 Tdeque<T>::Tdeque() { cout << "made a deque at " << this << '\n'; }
-//template<typename T>
-//Tdeque<T>::~Tdeque()
-//{
-//    dNode<T>* temp = new dNode<T>;
-//    while (Head != nullptr)
-//    {
-//        temp = Head;
-//        Head = Head->next;
-//        delete temp;
-//    }
-//    cout << "deleted a deque at " << this << '\n';
-//}
+template<typename T>
+Tdeque<T>::~Tdeque()
+{
+    dNode<T>* temp = new dNode<T>;
+    while (Head != nullptr)
+    {
+        temp = Head;
+        Head = Head->next;
+        delete temp;
+    }
+    cout << "deleted a deque at " << this << '\n';
+}
 template<typename T>
 Tdeque<T>::Tdeque(const Tdeque& t)
 {
@@ -71,7 +71,7 @@ int Tdeque<T>::size()
 {
     int sz = 0;
     dNode<T>* temp = Head;
-    while (temp != nullptr)
+    while (temp != Tail)
     {
         temp = temp->next;
         sz++;
@@ -82,7 +82,7 @@ int Tdeque<T>::size()
 template<typename T>
 bool Tdeque<T>::isEmpty()
 {
-    return (Head == nullptr);
+    return (Head == Tail);
 }
 
 template<typename T>

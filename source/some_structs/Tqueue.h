@@ -69,7 +69,7 @@ int Tqueue<T>::size()
 {
     int sz = 0;
     qNode<T>* temp = Head;
-    while (temp != nullptr)
+    while (temp != Tail)
     {
         temp = temp->next;
         sz++;
