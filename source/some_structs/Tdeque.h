@@ -45,7 +45,7 @@ template<typename T>
 Tdeque<T>::~Tdeque()
 {
     dNode<T>* temp = new dNode<T>;
-    while (Head != nullptr)
+    while (Head != Tail->next)
     {
         temp = Head;
         Head = Head->next;
