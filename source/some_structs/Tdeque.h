@@ -82,7 +82,7 @@ int Tdeque<T>::size()
 template<typename T>
 bool Tdeque<T>::isEmpty()
 {
-    return (Head == Tail);
+    return (Head == nullptr);
 }
 
 template<typename T>
@@ -208,7 +208,7 @@ void Tdeque<T>::print()
     dNode<T>* temp = new dNode<T>;
     temp = Head;
     cout << "<Tdeque object at " << this << "> : [ ";
-    while (temp != nullptr)
+    while (temp != Tail)
     {
         cout << temp->data << ' ';
         temp = temp->next;
@@ -222,7 +222,7 @@ void Tdeque<T>::print()
 //    dNode<T>* temp = new dNode<T>;
 //    temp = m.Head;
 ////    os << "<Tdeque object at " << &m << "> : [ ";
-//    while (temp != nullptr)
+//    while (temp != Tail)
 //    {
 //        os << temp->data << ' ';
 //        temp = temp->next;

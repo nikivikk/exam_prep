@@ -163,7 +163,7 @@ void Tqueue<T>::print()
     qNode<T>* temp = new qNode<T>;
     temp = Head;
     cout << "<Tqueue object at " << this << "> : [ ";
-    while (temp != nullptr)
+    while (temp != Tail)
     {
         cout << temp->data << ' ';
         temp = temp->next;
