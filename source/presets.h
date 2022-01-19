@@ -64,4 +64,21 @@ vector<string> ReadFromFile(string filename)
     return input;
 }
 
-// добавить разделение строк
+// делит строку на вектор строк по передаваемым в строке разделителям(delimiters)
+vector<string> SplitString(string input, string delimiters)
+{
+    vector<string> res;
+    string t = "";
+    for (char c : input)
+        if (delimiters.find(c) != string::npos)
+        {
+            if (t != "")
+                res.push_back(t);
+            t = "";
+        }
+        else
+            t += c;
+    if (t != "")
+        res.push_back(t);
+    return res;
+}
