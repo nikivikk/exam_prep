@@ -126,7 +126,10 @@ void Tqueue<T>::pop_first()
     if (Head == nullptr)
         raise_error("queue is empty. ABORTED");
     else if (Tail == nullptr)
+    {
         Head = nullptr;
+        raise_error("queue is empty. ABORTED");
+    }
     else
     {
         qNode<T>* temp = Head;
