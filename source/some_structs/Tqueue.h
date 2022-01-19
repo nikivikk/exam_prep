@@ -69,7 +69,7 @@ int Tqueue<T>::size()
 {
     int sz = 0;
     qNode<T>* temp = Head;
-    while (temp != Tail)
+    while (temp != Tail->next)
     {
         temp = temp->next;
         sz++;
@@ -163,7 +163,7 @@ void Tqueue<T>::print()
     qNode<T>* temp = new qNode<T>;
     temp = Head;
     cout << "<Tqueue object at " << this << "> : [ ";
-    while (temp != Tail)
+    while (temp != Tail->next)
     {
         cout << temp->data << ' ';
         temp = temp->next;

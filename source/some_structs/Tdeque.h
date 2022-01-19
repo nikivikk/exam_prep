@@ -71,7 +71,7 @@ int Tdeque<T>::size()
 {
     int sz = 0;
     dNode<T>* temp = Head;
-    while (temp != Tail)
+    while (temp != Tail->next)
     {
         temp = temp->next;
         sz++;
@@ -208,7 +208,7 @@ void Tdeque<T>::print()
     dNode<T>* temp = new dNode<T>;
     temp = Head;
     cout << "<Tdeque object at " << this << "> : [ ";
-    while (temp != Tail)
+    while (temp != Tail->next)
     {
         cout << temp->data << ' ';
         temp = temp->next;
