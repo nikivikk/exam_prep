@@ -30,6 +30,7 @@ public:
     
     friend std::ostream &operator<<(std::ostream &os, TKprk const &m);
     TKprk operator=(TKprk &t);
+    int operator[](int i);
     
     ~TKprk() { cout << "\n< TKprk object has been deleted at " << this << " >\n"; };
 };

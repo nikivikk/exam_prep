@@ -150,3 +150,8 @@ TKprk TKprk::operator=(TKprk &t)
     new_obj.Matr = t.Matr;
     return new_obj;
 }
+
+int TKprk::operator[](int i)
+{
+    return Kprk[i];
+}

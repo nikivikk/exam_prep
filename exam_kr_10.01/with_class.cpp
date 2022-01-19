@@ -22,6 +22,7 @@ int main()
     cout << "making new class : ";
     TKprk new_obj = obj;
     cout << new_obj;
+    cout << "\nперегрузка [] : " << new_obj[0];
     
     return 0;
 }
