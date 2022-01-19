@@ -32,5 +32,7 @@
 #include "funcs.h"
 #include "some_structs/Tqueue.h"
 #include "some_structs/Tstack.h"
+#include "some_structs/Tdeque.h"
+#include "some_structs/TList.h"
 
 using namespace std;
