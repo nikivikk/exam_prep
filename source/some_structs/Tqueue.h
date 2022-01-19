@@ -5,17 +5,17 @@
 using namespace std;
 
 template <class T>
-struct Node
+struct qNode
 {
     T data;
-    Node* prev = nullptr;
-    Node* next = nullptr;
+    qNode* prev = nullptr;
+    qNode* next = nullptr;
 };
 
 template <class T>
 class Tqueue {
-    struct Node<T>* Tail;
-    struct Node<T>* Head;
+    struct qNode<T>* Tail;
+    struct qNode<T>* Head;
     int amount = 0;
     void raise_error(string e);
 public:
@@ -42,7 +42,7 @@ Tqueue<T>::Tqueue() { cout << "made a queue at " << this << '\n'; }
 template<typename T>
 Tqueue<T>::~Tqueue()
 {
-    Node<T>* temp = new Node<T>;
+    qNode<T>* temp = new qNode<T>;
     while (Head != nullptr)
     {
         temp = Head;
@@ -55,7 +55,7 @@ template<typename T>
 Tqueue<T>::Tqueue(const Tqueue& t)
 {
     Head = Tail = nullptr;
-    Node<T>* temp = new Node<T>;
+    qNode<T>* temp = new qNode<T>;
     temp = t.Head;
     while (temp != nullptr)
     {
@@ -68,7 +68,7 @@ template<typename T>
 int Tqueue<T>::size()
 {
     int sz = 0;
-    Node<T>* temp = Head;
+    qNode<T>* temp = Head;
     while (temp != nullptr)
     {
         temp = temp->next;
@@ -86,7 +86,7 @@ bool Tqueue<T>::isEmpty()
 template<typename T>
 void Tqueue<T>::clear()
 {
-    Node<T>* temp = new Node<T>;
+    qNode<T>* temp = new qNode<T>;
     while (Head != nullptr)
     {
         temp = Head;
@@ -98,7 +98,7 @@ void Tqueue<T>::clear()
 template<typename T>
 void Tqueue<T>::push(T data)
 {
-    Node<T>* temp = new Node<T>;
+    qNode<T>* temp = new qNode<T>;
     temp->data = data;
 
     if (Head == nullptr)
@@ -129,7 +129,7 @@ void Tqueue<T>::pop_first()
         Head = nullptr;
     else
     {
-        Node<T>* temp = Head;
+        qNode<T>* temp = Head;
         Head = Head->next;
         delete temp;
     }
@@ -157,7 +157,7 @@ T Tqueue<T>::back()
 template<typename T>
 void Tqueue<T>::print()
 {
-    Node<T>* temp = new Node<T>;
+    qNode<T>* temp = new qNode<T>;
     temp = Head;
     cout << "<Tqueue object at " << this << "> : [ ";
     while (temp != nullptr)
@@ -171,7 +171,7 @@ void Tqueue<T>::print()
 //template<typename T>
 //std::ostream& operator<<(std::ostream &os, Tqueue<T> const &m)
 //{
-//    Node<T>* temp = new Node<T>;
+//    qNode<T>* temp = new qNode<T>;
 //    temp = m.Head;
 ////    os << "<Tqueue object at " << &m << "> : [ ";
 //    while (temp != nullptr)
